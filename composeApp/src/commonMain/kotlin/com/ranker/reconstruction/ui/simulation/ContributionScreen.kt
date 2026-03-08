@@ -6,6 +6,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,7 +24,8 @@ import com.ranker.reconstruction.domain.SimulationCalculator
 fun ContributionScreen(
     state: SimulationState,
     onNavigateToMargin: () -> Unit,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    onNavigateHome: () -> Unit = onBack
 ) {
     Scaffold(
         topBar = {
@@ -32,6 +34,11 @@ fun ContributionScreen(
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "뒤로")
+                    }
+                },
+                actions = {
+                    IconButton(onClick = onNavigateHome) {
+                        Icon(Icons.Default.Home, contentDescription = "홈")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(

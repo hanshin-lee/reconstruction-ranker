@@ -5,6 +5,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,7 +35,10 @@ private fun medalColor(rank: Int): Color = when (rank) {
 @Composable
 fun RankingScreen(
     complexes: List<Complex>,
-    onComplexClick: (Complex) -> Unit
+    onComplexClick: (Complex) -> Unit,
+    onAddComplexClick: () -> Unit = {},
+    onQuickSimulationClick: () -> Unit = {},
+    onDeleteComplex: (Complex) -> Unit = {}
 ) {
     Scaffold(
         topBar = {
@@ -51,11 +57,29 @@ fun RankingScreen(
                         )
                     }
                 },
+                actions = {
+                    TextButton(onClick = onQuickSimulationClick) {
+                        Text(
+                            "직접 입력",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface,
                     titleContentColor = MaterialTheme.colorScheme.onSurface
                 )
             )
+        },
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = onAddComplexClick,
+                containerColor = MaterialTheme.colorScheme.primary,
+                contentColor = MaterialTheme.colorScheme.onPrimary
+            ) {
+                Icon(Icons.Default.Add, contentDescription = "구역 추가")
+            }
         },
         containerColor = MaterialTheme.colorScheme.background
     ) { padding ->
@@ -70,7 +94,8 @@ fun RankingScreen(
                 ComplexCard(
                     rank = index + 1,
                     complex = complex,
-                    onClick = { onComplexClick(complex) }
+                    onClick = { onComplexClick(complex) },
+                    onDelete = if (complex.isUserCreated) ({ onDeleteComplex(complex) }) else null
                 )
             }
         }
@@ -79,7 +104,12 @@ fun RankingScreen(
 
 // ── Card ───────────────────────────────────────────────────────────────────────
 @Composable
-private fun ComplexCard(rank: Int, complex: Complex, onClick: () -> Unit) {
+private fun ComplexCard(
+    rank: Int,
+    complex: Complex,
+    onClick: () -> Unit,
+    onDelete: (() -> Unit)?
+) {
     val mc = medalColor(rank)
     OutlinedCard(
         modifier = Modifier
@@ -141,12 +171,22 @@ private fun ComplexCard(rank: Int, complex: Complex, onClick: () -> Unit) {
                 }
             }
 
-            // Chevron
-            Text(
-                "›",
-                style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+            // Delete button (user-created only) or chevron
+            if (onDelete != null) {
+                IconButton(onClick = onDelete) {
+                    Icon(
+                        Icons.Default.Delete,
+                        contentDescription = "삭제",
+                        tint = MaterialTheme.colorScheme.error
+                    )
+                }
+            } else {
+                Text(
+                    "›",
+                    style = MaterialTheme.typography.titleLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
         }
     }
 }

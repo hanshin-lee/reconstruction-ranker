@@ -31,7 +31,8 @@ data class Complex(
     val totalPreCompletionAssetValue: Double,  // I61: total appraised value of old units (M KRW)
 
     val subComplexes: List<SubComplex>,
-    val newUnitTypes: List<NewUnitType>
+    val newUnitTypes: List<NewUnitType>,
+    val isUserCreated: Boolean = false
 ) {
     val landValuePerPyeong: Double
         get() = postCompletionPricePerPyeong - constructionCostPerPyeong

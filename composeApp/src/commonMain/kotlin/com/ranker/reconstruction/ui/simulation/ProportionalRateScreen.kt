@@ -6,6 +6,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,7 +22,8 @@ import androidx.compose.ui.unit.sp
 fun ProportionalRateScreen(
     state: SimulationState,
     onNavigateToContribution: () -> Unit,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    onNavigateHome: () -> Unit = onBack
 ) {
     val rate = state.proportionalRate
     val ratePercent = rate * 100
@@ -39,6 +41,11 @@ fun ProportionalRateScreen(
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "뒤로")
+                    }
+                },
+                actions = {
+                    IconButton(onClick = onNavigateHome) {
+                        Icon(Icons.Default.Home, contentDescription = "홈")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(

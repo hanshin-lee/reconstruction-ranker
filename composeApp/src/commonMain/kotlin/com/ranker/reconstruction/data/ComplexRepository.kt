@@ -10,7 +10,7 @@ private val json = Json { ignoreUnknownKeys = true }
 object ComplexRepository {
 
     @OptIn(ExperimentalResourceApi::class)
-    suspend fun loadAll(): List<Complex> {
+    private suspend fun loadBundled(): List<Complex> {
         val files = listOf(
             "files/complex_apgujeong3.json",
             "files/complex_sinbanpo2.json"
@@ -18,6 +18,16 @@ object ComplexRepository {
         return files.map { path ->
             val bytes = Res.readBytes(path)
             json.decodeFromString<Complex>(bytes.decodeToString())
-        }.sortedByDescending { it.landValuePerPyeong }
+        }
     }
+
+    suspend fun loadAll(): List<Complex> {
+        val bundled = loadBundled()
+        val userCreated = UserComplexStore.loadAll()
+        return (bundled + userCreated).sortedByDescending { it.landValuePerPyeong }
+    }
+
+    suspend fun addComplex(complex: Complex) = UserComplexStore.save(complex)
+
+    suspend fun deleteComplex(complexId: String) = UserComplexStore.delete(complexId)
 }

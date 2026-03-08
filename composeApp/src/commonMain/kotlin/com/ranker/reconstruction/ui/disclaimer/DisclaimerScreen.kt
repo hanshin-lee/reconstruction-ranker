@@ -6,6 +6,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -21,7 +22,8 @@ import com.ranker.reconstruction.data.model.Complex
 fun DisclaimerScreen(
     complex: Complex,
     onAccept: () -> Unit,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    onNavigateHome: () -> Unit = onBack
 ) {
     Scaffold(
         topBar = {
@@ -30,6 +32,11 @@ fun DisclaimerScreen(
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "뒤로")
+                    }
+                },
+                actions = {
+                    IconButton(onClick = onNavigateHome) {
+                        Icon(Icons.Default.Home, contentDescription = "홈")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
