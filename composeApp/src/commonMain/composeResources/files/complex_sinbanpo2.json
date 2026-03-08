@@ -1,0 +1,116 @@
+{
+  "id": "sinbanpo2",
+  "nameKo": "신반포2단지",
+  "postCompletionPricePerPyeong": 210.0,
+  "constructionCostPerPyeong": 10.0,
+  "generalSalePricePerPyeong": 73.29,
+  "memberSalePricePerPyeong": 75.0,
+  "memberSaleTotal": 4271792.7,
+  "generalSaleTotal": 425082.64,
+  "fixedPostCompletionTotal": 136457.0,
+  "constructionCostTotal": 1388264.39,
+  "fixedProjectCostTotal": 0.0,
+  "totalPreCompletionAssetValue": 4571252,
+  "subComplexes": [
+    {
+      "name": "신반포2단지",
+      "oldUnits": [
+        {
+          "typeName": "68㎡",
+          "exclusiveAreaM2": 68.91,
+          "preCompletionValueM": 2050.0,
+          "kbMedianPriceM": 3775.0
+        },
+        {
+          "typeName": "79㎡",
+          "exclusiveAreaM2": 79.42,
+          "preCompletionValueM": 2350.0,
+          "kbMedianPriceM": 3950.0
+        },
+        {
+          "typeName": "92㎡",
+          "exclusiveAreaM2": 92.2,
+          "preCompletionValueM": 2870.0,
+          "kbMedianPriceM": 4600.0
+        },
+        {
+          "typeName": "93㎡",
+          "exclusiveAreaM2": 93.71,
+          "preCompletionValueM": 2870.0,
+          "kbMedianPriceM": 4600.0
+        },
+        {
+          "typeName": "107㎡",
+          "exclusiveAreaM2": 107.31,
+          "preCompletionValueM": 3150.0,
+          "kbMedianPriceM": 5400.0
+        },
+        {
+          "typeName": "135㎡",
+          "exclusiveAreaM2": 135.97,
+          "preCompletionValueM": 3850.0,
+          "kbMedianPriceM": 6300.0
+        },
+        {
+          "typeName": "137㎡",
+          "exclusiveAreaM2": 137.66,
+          "preCompletionValueM": 3850.0,
+          "kbMedianPriceM": 6300.0
+        },
+        {
+          "typeName": "150㎡",
+          "exclusiveAreaM2": 150.58,
+          "preCompletionValueM": 4250.0,
+          "kbMedianPriceM": 7100.0
+        }
+      ]
+    }
+  ],
+  "newUnitTypes": [
+    {
+      "label": "65",
+      "exclusiveAreaM2": 65.0,
+      "supplyAreaM2": 88.373
+    },
+    {
+      "label": "75",
+      "exclusiveAreaM2": 75.0,
+      "supplyAreaM2": 101.77
+    },
+    {
+      "label": "84",
+      "exclusiveAreaM2": 84.0,
+      "supplyAreaM2": 113.408
+    },
+    {
+      "label": "94",
+      "exclusiveAreaM2": 94.0,
+      "supplyAreaM2": 126.758
+    },
+    {
+      "label": "105",
+      "exclusiveAreaM2": 105.0,
+      "supplyAreaM2": 141.443
+    },
+    {
+      "label": "112",
+      "exclusiveAreaM2": 112.0,
+      "supplyAreaM2": 150.788
+    },
+    {
+      "label": "126",
+      "exclusiveAreaM2": 126.0,
+      "supplyAreaM2": 169.478
+    },
+    {
+      "label": "138",
+      "exclusiveAreaM2": 138.0,
+      "supplyAreaM2": 185.498
+    },
+    {
+      "label": "150",
+      "exclusiveAreaM2": 150.0,
+      "supplyAreaM2": 204.518
+    }
+  ]
+}

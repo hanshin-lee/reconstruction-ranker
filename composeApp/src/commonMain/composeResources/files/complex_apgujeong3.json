@@ -1,0 +1,179 @@
+{
+  "id": "apgujeong3",
+  "nameKo": "압구정3구역",
+  "postCompletionPricePerPyeong": 250.0,
+  "constructionCostPerPyeong": 10.6,
+  "generalSalePricePerPyeong": 85.0,
+  "memberSalePricePerPyeong": 83.0,
+  "memberSaleTotal": 18086875.07,
+  "generalSaleTotal": 1316772.61,
+  "fixedPostCompletionTotal": 1424709.88,
+  "constructionCostTotal": 5896076.4,
+  "fixedProjectCostTotal": 0.0,
+  "totalPreCompletionAssetValue": 24936338.4,
+  "subComplexes": [
+    {
+      "name": "현대1,2차",
+      "oldUnits": [
+        {
+          "typeName": "43평",
+          "exclusiveAreaM2": 131.48,
+          "preCompletionValueM": 5063.0,
+          "kbMedianPriceM": 6683.5
+        },
+        {
+          "typeName": "53평",
+          "exclusiveAreaM2": 161.19,
+          "preCompletionValueM": 7088.0,
+          "kbMedianPriceM": 8616.5
+        },
+        {
+          "typeName": "54평",
+          "exclusiveAreaM2": 172.94,
+          "preCompletionValueM": 6928.0,
+          "kbMedianPriceM": 9670.13187557043
+        },
+        {
+          "typeName": "65평",
+          "exclusiveAreaM2": 196.21,
+          "preCompletionValueM": 8328.0,
+          "kbMedianPriceM": 12091.5
+        }
+      ]
+    },
+    {
+      "name": "현대10차",
+      "oldUnits": [
+        {
+          "typeName": "36평",
+          "exclusiveAreaM2": 108.15,
+          "preCompletionValueM": 4337.0,
+          "kbMedianPriceM": 6175.0
+        },
+        {
+          "typeName": "50평",
+          "exclusiveAreaM2": 151.93,
+          "preCompletionValueM": 6145.0,
+          "kbMedianPriceM": 7675.0
+        }
+      ]
+    },
+    {
+      "name": "현대3차",
+      "oldUnits": [
+        {
+          "typeName": "33평",
+          "exclusiveAreaM2": 82.5,
+          "preCompletionValueM": 4091.0,
+          "kbMedianPriceM": 5662.5
+        }
+      ]
+    },
+    {
+      "name": "현대14차",
+      "oldUnits": [
+        {
+          "typeName": "32평",
+          "exclusiveAreaM2": 84.98,
+          "preCompletionValueM": 4348.0,
+          "kbMedianPriceM": 6250.0
+        }
+      ]
+    },
+    {
+      "name": "현대13차",
+      "oldUnits": [
+        {
+          "typeName": "36A평",
+          "exclusiveAreaM2": 105.45,
+          "preCompletionValueM": 4660.0,
+          "kbMedianPriceM": 6550.0
+        },
+        {
+          "typeName": "36B평",
+          "exclusiveAreaM2": 108.47,
+          "preCompletionValueM": 4660.0,
+          "kbMedianPriceM": 6550.0
+        }
+      ]
+    },
+    {
+      "name": "현대5차",
+      "oldUnits": [
+        {
+          "typeName": "35평",
+          "exclusiveAreaM2": 82.23,
+          "preCompletionValueM": 4259.0,
+          "kbMedianPriceM": 6200.0
+        }
+      ]
+    }
+  ],
+  "newUnitTypes": [
+    {
+      "label": "59",
+      "exclusiveAreaM2": 59.0,
+      "supplyAreaM2": 81.1
+    },
+    {
+      "label": "84",
+      "exclusiveAreaM2": 84.0,
+      "supplyAreaM2": 113.81
+    },
+    {
+      "label": "99",
+      "exclusiveAreaM2": 99.0,
+      "supplyAreaM2": 133.5
+    },
+    {
+      "label": "118",
+      "exclusiveAreaM2": 118.0,
+      "supplyAreaM2": 159.06
+    },
+    {
+      "label": "134",
+      "exclusiveAreaM2": 134.0,
+      "supplyAreaM2": 180.22
+    },
+    {
+      "label": "152",
+      "exclusiveAreaM2": 152.0,
+      "supplyAreaM2": 204.26
+    },
+    {
+      "label": "167",
+      "exclusiveAreaM2": 167.0,
+      "supplyAreaM2": 225.35
+    },
+    {
+      "label": "187",
+      "exclusiveAreaM2": 187.0,
+      "supplyAreaM2": 251.1
+    },
+    {
+      "label": "214",
+      "exclusiveAreaM2": 214.0,
+      "supplyAreaM2": 288.44
+    },
+    {
+      "label": "248",
+      "exclusiveAreaM2": 248.0,
+      "supplyAreaM2": 333.88
+    },
+    {
+      "label": "187p",
+      "exclusiveAreaM2": 187.0,
+      "supplyAreaM2": 251.61
+    },
+    {
+      "label": "214p",
+      "exclusiveAreaM2": 214.0,
+      "supplyAreaM2": 288.44
+    },
+    {
+      "label": "248p",
+      "exclusiveAreaM2": 248.0,
+      "supplyAreaM2": 333.88
+    }
+  ]
+}
